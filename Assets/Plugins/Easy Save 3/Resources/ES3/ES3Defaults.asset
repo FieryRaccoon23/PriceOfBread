@@ -33,6 +33,7 @@ MonoBehaviour:
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
     - BluMarble.Events
+    - BluMarble.ML
     - BluMarble.Pool
     - BluMarble.Singleton
     - BluMarble.UI
