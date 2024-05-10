@@ -34,6 +34,7 @@ MonoBehaviour:
     - Assembly-CSharp-firstpass
     - BluMarble.Events
     - BluMarble.ML
+    - BluMarble.PlayerState
     - BluMarble.Pool
     - BluMarble.Rules
     - BluMarble.RulesComponent

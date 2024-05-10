@@ -40,11 +40,11 @@ namespace BluMarble.Core
         {
             // Validate all singletons
 #if UNITY_EDITOR
-            //if (BluMarble.Procedural.ProceduralManager.Instance == null)
-            //{
-            //    Assert.IsTrue(false, "ProceduralManager not found!");
-            //    return;
-            //}
+            if (BluMarble.Rules.RulesManager.Instance == null)
+            {
+                Assert.IsTrue(false, "RulesManager not found!");
+                return;
+            }
             //if (BluMarble.UI.UIManager.Instance == null)
             //{
             //    Assert.IsTrue(false, "UIManager not found!");
@@ -57,7 +57,7 @@ namespace BluMarble.Core
             //}
 #endif
             // Init all singletons
-            //BluMarble.Procedural.ProceduralManager.Instance.PerformInit();
+            BluMarble.Rules.RulesManager.Instance.PerformInit();
             //BluMarble.UI.UIManager.Instance.PerformInit();
             //BluMarble.Events.EventsManager.Instance.PerformInit();
 
@@ -80,7 +80,7 @@ namespace BluMarble.Core
 
         private void UpdateGame()
         {
-            //BluMarble.Procedural.ProceduralManager.Instance.PerformUpdate();
+            BluMarble.Rules.RulesManager.Instance.PerformUpdate();
             //BluMarble.UI.UIManager.Instance.PerformUpdate();
         }
 

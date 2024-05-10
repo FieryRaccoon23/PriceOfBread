@@ -1,10 +1,7 @@
 {
-    "name": "BluMarble.RulesComponent",
-    "rootNamespace": "BluMarble.RulesComponent",
-    "references": [
-        "GUID:a5d714389c274454896e4b545c210e5a",
-        "GUID:41926835b0b1bd248b25b5bf4f65445f"
-    ],
+    "name": "BluMarble.PlayerState",
+    "rootNamespace": "BluMarble.PlayerState",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
