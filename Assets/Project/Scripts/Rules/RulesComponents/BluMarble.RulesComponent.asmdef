@@ -1,0 +1,16 @@
+{
+    "name": "BluMarble.RulesComponent",
+    "rootNamespace": "BluMarble.RulesComponent",
+    "references": [
+        "GUID:a5d714389c274454896e4b545c210e5a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

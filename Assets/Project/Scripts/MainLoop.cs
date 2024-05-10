@@ -33,6 +33,7 @@ namespace BluMarble.Core
             m_ActionList.Add(GameState.Running, UpdateGame);
             m_ActionList.Add(GameState.End, EndGame);
             m_ActionList.Add(GameState.Finished, FinishGame);
+
         }
 
         private void StartLoading()

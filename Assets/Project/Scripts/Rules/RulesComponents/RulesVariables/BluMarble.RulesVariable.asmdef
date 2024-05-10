@@ -1,0 +1,14 @@
+{
+    "name": "BluMarble.RulesVariable",
+    "rootNamespace": "BluMarble.RulesVariable",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

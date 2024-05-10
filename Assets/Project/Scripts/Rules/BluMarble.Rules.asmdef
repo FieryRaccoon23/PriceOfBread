@@ -1,0 +1,18 @@
+{
+    "name": "BluMarble.Rules",
+    "rootNamespace": "BluMarble.Rules",
+    "references": [
+        "GUID:8ffbfaf8033e1844ab6a596647563ad6",
+        "GUID:bc5d015a3a06adf4dba1d4ab59e87b9e",
+        "GUID:a5d714389c274454896e4b545c210e5a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

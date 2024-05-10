@@ -35,6 +35,9 @@ MonoBehaviour:
     - BluMarble.Events
     - BluMarble.ML
     - BluMarble.Pool
+    - BluMarble.Rules
+    - BluMarble.RulesComponent
+    - BluMarble.RulesVariable
     - BluMarble.Singleton
     - BluMarble.UI
     showAdvancedSettings: 0
