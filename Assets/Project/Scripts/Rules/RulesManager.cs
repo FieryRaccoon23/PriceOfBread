@@ -18,7 +18,7 @@ namespace BluMarble.Rules
         {
             // Get states for players
             m_GamePlayersStates = new List<PlayerState.GamePlayerState>();
-            GameObject[] GamePlayerObjectsWithTag = GameObject.FindGameObjectsWithTag(BluMarble.Singleton.GameSettings.m_GamePlayerTag);
+            List<GameObject> GamePlayerObjectsWithTag = BluMarble.Singleton.GameSettings.Instance.GamePlayerObjects();
             foreach (GameObject Obj in GamePlayerObjectsWithTag)
             {
                 PlayerState.GamePlayerState CurrentPlayerState = Obj.GetComponent<PlayerState.GamePlayerState>();

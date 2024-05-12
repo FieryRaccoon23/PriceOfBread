@@ -19,12 +19,6 @@ namespace BluMarble.Singleton
             {
                 m_GamePlayersObjects = new List<GameObject>();
                 m_GamePlayersObjects = GameObject.FindGameObjectsWithTag(BluMarble.Singleton.GameSettings.m_GamePlayerTag).ToList();
-                //foreach (GameObject Obj in GamePlayerObjectsWithTag)
-                //{
-                //    PlayerState.GamePlayerState CurrentPlayerState = Obj.GetComponent<PlayerState.GamePlayerState>();
-                //    CurrentPlayerState.PerformInit();
-                //    m_GamePlayersStates.Add(CurrentPlayerState);
-                //}
             }
 
             return m_GamePlayersObjects;
