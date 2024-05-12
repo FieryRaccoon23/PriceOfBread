@@ -50,16 +50,27 @@ namespace BluMarble.Core
             //    Assert.IsTrue(false, "UIManager not found!");
             //    return;
             //}
-            //if (BluMarble.Events.EventsManager.Instance == null)
-            //{
-            //    Assert.IsTrue(false, "EventsManager not found!");
-            //    return;
-            //}
+            if (BluMarble.Events.EventsManager.Instance == null)
+            {
+                Assert.IsTrue(false, "EventsManager not found!");
+                return;
+            }
+            if (BluMarble.PlayerState.PlayerStateManager.Instance == null)
+            {
+                Assert.IsTrue(false, "PlayerStateManager not found!");
+                return;
+            }
+            if (BluMarble.Interface.PlayerInterfaceManager.Instance == null)
+            {
+                Assert.IsTrue(false, "PlayerInterfaceManager not found!");
+                return;
+            }
 #endif
             // Init all singletons
+            BluMarble.Events.EventsManager.Instance.PerformInit();
+            BluMarble.PlayerState.PlayerStateManager.Instance.PerformInit();
+            BluMarble.Interface.PlayerInterfaceManager.Instance.PerformInit();
             BluMarble.Rules.RulesManager.Instance.PerformInit();
-            //BluMarble.UI.UIManager.Instance.PerformInit();
-            //BluMarble.Events.EventsManager.Instance.PerformInit();
 
             m_CurrentGameState = GameState.Start;
         }

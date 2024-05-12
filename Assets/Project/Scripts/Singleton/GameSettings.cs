@@ -1,13 +1,33 @@
+using NUnit.Framework;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Playables;
 
 namespace BluMarble.Singleton
 {
-
     public class GameSettings : Singleton<GameSettings>
     {
-        //[Header("Procedural Settings")]
-        //[Tooltip("Max speed at which the procedural object will be moved.")]
-        //[SerializeField]
+        public const int m_NumOfPlayers = 4;
+        public const int m_NumOfAIPlayers = 3;
+        public const string m_GamePlayerTag = "GamePlayer";
 
+        private List<GameObject> m_GamePlayersObjects;
+        public List<GameObject> GamePlayerObjects()
+        {
+            if(m_GamePlayersObjects == null)
+            {
+                m_GamePlayersObjects = new List<GameObject>();
+                m_GamePlayersObjects = GameObject.FindGameObjectsWithTag(BluMarble.Singleton.GameSettings.m_GamePlayerTag).ToList();
+                //foreach (GameObject Obj in GamePlayerObjectsWithTag)
+                //{
+                //    PlayerState.GamePlayerState CurrentPlayerState = Obj.GetComponent<PlayerState.GamePlayerState>();
+                //    CurrentPlayerState.PerformInit();
+                //    m_GamePlayersStates.Add(CurrentPlayerState);
+                //}
+            }
+
+            return m_GamePlayersObjects;
+        }
     }
 }

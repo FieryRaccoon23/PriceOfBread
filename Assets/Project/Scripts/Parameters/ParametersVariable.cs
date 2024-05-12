@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace BluMarble.RulesVariable
+namespace BluMarble.Parameters
 {
-    public enum RuleVariables
+    public enum ParametersVariable
     {
         ///////////////////////////////Globally affects everyone///////////////////////////////
         Tax = 0,
@@ -12,12 +12,20 @@ namespace BluMarble.RulesVariable
         /////////////////////////////// Individual effects///////////////////////////////
         
         // Fiscal rules
-        WorkersPay,
-        QualityControl,
+        BreadPrice,
+        CostOfWorkers,
+        CostOfQualityControl,
+        CostOfAd,
+        CostOfNormalFlour,
+        CostOfArtisanalFlour,
+        CostOfLookTheOtherWay,
+        CostOfDirtyWork,
+        CostOfGatheringIntel,
 
-        // Social Rules
+        // Social rules
         Trust, // related to consumers
         Satisfaction, // related to workers
+        Confidence, // related to investors
 
         ///////////////////////////////END - Add stuff before it///////////////////////////////
         MaxVal

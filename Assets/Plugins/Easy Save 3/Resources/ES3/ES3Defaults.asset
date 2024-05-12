@@ -32,13 +32,16 @@ MonoBehaviour:
     assemblyNames:
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
+    - BluMarble.Controller
     - BluMarble.Events
+    - BluMarble.ID
+    - BluMarble.Interface
     - BluMarble.ML
+    - BluMarble.Parameters
     - BluMarble.PlayerState
     - BluMarble.Pool
     - BluMarble.Rules
     - BluMarble.RulesComponent
-    - BluMarble.RulesVariable
     - BluMarble.Singleton
     - BluMarble.UI
     showAdvancedSettings: 0

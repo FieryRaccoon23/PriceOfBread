@@ -2,8 +2,8 @@
     "name": "BluMarble.RulesComponent",
     "rootNamespace": "BluMarble.RulesComponent",
     "references": [
-        "GUID:a5d714389c274454896e4b545c210e5a",
-        "GUID:41926835b0b1bd248b25b5bf4f65445f"
+        "GUID:41926835b0b1bd248b25b5bf4f65445f",
+        "GUID:69e95cd35f5270a4a8c0efe412a61a5b"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,7 +1,11 @@
 {
-    "name": "BluMarble.RulesVariable",
-    "rootNamespace": "BluMarble.RulesVariable",
-    "references": [],
+    "name": "BluMarble.Controller",
+    "rootNamespace": "BluMarble.Controller",
+    "references": [
+        "GUID:69e95cd35f5270a4a8c0efe412a61a5b",
+        "GUID:e4ba4c1c25d4908498a34992af9a6e69",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
