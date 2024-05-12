@@ -45,9 +45,5 @@ namespace BluMarble.PlayerState
             return m_StateParameters[(int)ParametersVariableValue].Value;
         }
 
-        private void Update()
-        {
-            Debug.Log("Player id: " + m_PlayerID.name + " Price of Bread: " + GetValue(BluMarble.Parameters.ParametersVariable.BreadPrice).ToString());
-        }
     }
 }
