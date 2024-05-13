@@ -1,3 +1,5 @@
+//#define ML_TRAINING
+
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -45,11 +47,6 @@ namespace BluMarble.Core
                 Assert.IsTrue(false, "RulesManager not found!");
                 return;
             }
-            //if (BluMarble.UI.UIManager.Instance == null)
-            //{
-            //    Assert.IsTrue(false, "UIManager not found!");
-            //    return;
-            //}
             if (BluMarble.Events.EventsManager.Instance == null)
             {
                 Assert.IsTrue(false, "EventsManager not found!");
@@ -65,12 +62,24 @@ namespace BluMarble.Core
                 Assert.IsTrue(false, "PlayerInterfaceManager not found!");
                 return;
             }
+#if ML_TRAINING
+            if (BluMarble.ML.MLManager.Instance == null)
+            {
+                Assert.IsTrue(false, "MLManager not found!");
+                return;
+            }
+#endif
+
 #endif
             // Init all singletons
             BluMarble.Events.EventsManager.Instance.PerformInit();
             BluMarble.PlayerState.PlayerStateManager.Instance.PerformInit();
             BluMarble.Interface.PlayerInterfaceManager.Instance.PerformInit();
             BluMarble.Rules.RulesManager.Instance.PerformInit();
+
+#if ML_TRAINING
+            BluMarble.Rules.RulesManager.Instance.PerformInit();
+#endif
 
             m_CurrentGameState = GameState.Start;
         }
@@ -82,9 +91,10 @@ namespace BluMarble.Core
 
         private void StartGame()
         {
-            //BluMarble.Procedural.ProceduralManager.Instance.PerformStart();
-            //BluMarble.UI.UIManager.Instance.PerformStart();
-            //BluMarble.Events.EventsManager.Instance.PerformStart();
+
+#if ML_TRAINING
+            BluMarble.Rules.RulesManager.Instance.PerformStart();
+#endif
 
             m_CurrentGameState = GameState.Running;
         }
@@ -92,21 +102,26 @@ namespace BluMarble.Core
         private void UpdateGame()
         {
             BluMarble.Rules.RulesManager.Instance.PerformUpdate();
-            //BluMarble.UI.UIManager.Instance.PerformUpdate();
+
+#if ML_TRAINING
+            BluMarble.Rules.RulesManager.Instance.PerformUpdate();
+#endif
         }
 
         private void EndGame()
         {
-            //BluMarble.Procedural.ProceduralManager.Instance.PerformEnd();
-            //BluMarble.UI.UIManager.Instance.PerformEnd();
+#if ML_TRAINING
+            BluMarble.Rules.RulesManager.Instance.PerformEnd();
+#endif
         }
 
         private void FinishGame()
         {
-            //BluMarble.Procedural.ProceduralManager.Instance.PerformFinish();
-            //BluMarble.UI.UIManager.Instance.PerformFinish();
+#if ML_TRAINING
+            BluMarble.Rules.RulesManager.Instance.PerformFinish();
+#endif
 
-            // Cleanup here
+            BluMarble.Events.EventsManager.Instance.PerformFinish();
         }
 
         private void DoNothing()

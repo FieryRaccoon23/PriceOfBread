@@ -43,6 +43,7 @@ MonoBehaviour:
     - BluMarble.Rules
     - BluMarble.RulesComponent
     - BluMarble.Singleton
+    - BluMarble.Society
     - BluMarble.UI
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0

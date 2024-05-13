@@ -1,10 +1,8 @@
 {
-    "name": "BluMarble.ML",
-    "rootNamespace": "BluMarble.ML",
+    "name": "BluMarble.Society",
+    "rootNamespace": "BluMarble.Society",
     "references": [
-        "GUID:8ffbfaf8033e1844ab6a596647563ad6",
-        "GUID:e4ba4c1c25d4908498a34992af9a6e69",
-        "GUID:246524ec437e67946958ae4cd0dff654"
+        "GUID:8ffbfaf8033e1844ab6a596647563ad6"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
