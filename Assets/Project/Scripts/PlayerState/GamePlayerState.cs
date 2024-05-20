@@ -45,5 +45,11 @@ namespace BluMarble.PlayerState
             return m_StateParameters[(int)ParametersVariableValue].Value;
         }
 
+        public void AddValue(float Value, BluMarble.Parameters.ParametersVariable ParametersVariableValue)
+        {
+            float CurrentVal = GetValue(ParametersVariableValue);
+            float NewVal = CurrentVal + Value;
+            SetValue(NewVal, ParametersVariableValue);
+        }
     }
 }

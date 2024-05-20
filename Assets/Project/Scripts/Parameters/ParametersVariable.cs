@@ -11,7 +11,7 @@ namespace BluMarble.Parameters
 
         /////////////////////////////// Individual effects///////////////////////////////
         
-        // Fiscal rules
+        // Fiscal rules that user can set
         BreadPrice,
         CostOfWorkers,
         CostOfQualityControl,
@@ -21,6 +21,9 @@ namespace BluMarble.Parameters
         CostOfLookTheOtherWay,
         CostOfDirtyWork,
         CostOfGatheringIntel,
+
+        // Fiscal rules that are calculated
+        Revenue,
 
         // Social rules
         Trust, // related to consumers

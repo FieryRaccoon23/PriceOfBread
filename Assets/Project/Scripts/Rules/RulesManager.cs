@@ -12,7 +12,10 @@ namespace BluMarble.Rules
         private List<RulesComponent.RulesComponent> m_RulesComponents = new List<RulesComponent.RulesComponent>();
 
         private List<PlayerState.GamePlayerState> m_GamePlayersStates;
-       
+
+        private BluMarble.RulesComponent.RulesComponent_Global m_GlobalRules;
+
+        private bool m_ShouldUpdate = false;
 
         public override void PerformInit()
         {
@@ -25,22 +28,50 @@ namespace BluMarble.Rules
                 m_GamePlayersStates.Add(CurrentPlayerState);
             }
 
+            // Init global rules
+            m_GlobalRules = new RulesComponent.RulesComponent_Global();
+            m_GlobalRules.PerformInit();
+
             // Init rules
             foreach (var CurrentRulesComp in m_RulesComponents)
             {
-                CurrentRulesComp.PerformInit();
+                CurrentRulesComp.PerformInit(ref m_GlobalRules);
             }
+
+            m_ShouldUpdate = false;
         }
 
         public override void PerformUpdate()
         {
-            for(int i = 0; i < m_GamePlayersStates.Count; ++i) 
+            if(!m_ShouldUpdate)
             {
+                return;
+            }    
+
+            m_GlobalRules.PerformUpdate();
+
+            List<BluMarble.PlayerState.GamePlayerState> OtherGamePlayersStates = new List<PlayerState.GamePlayerState>();
+
+            for (int i = 0; i < m_GamePlayersStates.Count; ++i) 
+            {
+                // Current player
                 PlayerState.GamePlayerState CurrentGamePlayerState = m_GamePlayersStates[i];
+
+                // Other players
+                OtherGamePlayersStates.Clear();
+                for (int j = 0; j < m_GamePlayersStates.Count; ++j)
+                {
+                    if(i == j)
+                    {
+                        continue;
+                    }
+
+                    OtherGamePlayersStates.Add(m_GamePlayersStates[j]);
+                }
 
                 foreach (var CurrentRulesComp in m_RulesComponents)
                 {
-                    CurrentRulesComp.PerformUpdate(ref CurrentGamePlayerState);
+                    CurrentRulesComp.PerformUpdate(ref CurrentGamePlayerState, ref OtherGamePlayersStates);
                 }
             }
         }
