@@ -165,6 +165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RulesComponents:
   - {fileID: 11400000, guid: 078935e9d82a3574cbadf767c477d09d, type: 2}
+  - {fileID: 11400000, guid: b2ea184e03f8f7f42879f5606d261819, type: 2}
+  - {fileID: 11400000, guid: 769e0261896d04e4291cb5b5317122f9, type: 2}
 --- !u!1001 &144522791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1212,6 +1214,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1615047908}
     m_Modifications:
+    - target: {fileID: 613606939804836935, guid: 37184b99cec50e94d8226aab77a53f59, type: 3}
+      propertyPath: m_IsBeingTrained
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5759591105877917737, guid: 37184b99cec50e94d8226aab77a53f59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -24,6 +24,8 @@ namespace BluMarble.Parameters
 
         // Fiscal rules that are calculated
         Revenue,
+        TotalCost,
+        Profit,
 
         // Social rules
         Trust, // related to consumers

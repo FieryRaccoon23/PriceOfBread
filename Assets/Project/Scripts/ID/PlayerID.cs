@@ -7,6 +7,9 @@ namespace BluMarble.ID
         [SerializeField]
         private bool m_IsUser = false;
 
+        [SerializeField]
+        private bool m_IsBeingTrained = false;
+
         private static int m_GeneratedPlayerID = 0;
 
         private int m_ID = -1;
@@ -30,6 +33,14 @@ namespace BluMarble.ID
             { 
                 return m_IsUser; 
             } 
+        }
+
+        public bool IsBeingTrained
+        {
+            get
+            {
+                return m_IsBeingTrained;
+            }
         }
     }
 }
