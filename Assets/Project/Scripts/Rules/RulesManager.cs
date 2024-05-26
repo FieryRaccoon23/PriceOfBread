@@ -15,8 +15,6 @@ namespace BluMarble.Rules
 
         private BluMarble.RulesComponent.RulesComponent_Global m_GlobalRules;
 
-        private bool m_ShouldUpdate = false;
-
         public override void PerformInit()
         {
             // Get states for players
@@ -38,16 +36,10 @@ namespace BluMarble.Rules
                 CurrentRulesComp.PerformInit(ref m_GlobalRules);
             }
 
-            m_ShouldUpdate = false;
         }
 
         public override void PerformUpdate()
         {
-            if(!m_ShouldUpdate)
-            {
-                return;
-            }    
-
             m_GlobalRules.PerformUpdate();
 
             List<BluMarble.PlayerState.GamePlayerState> OtherGamePlayersStates = new List<PlayerState.GamePlayerState>();

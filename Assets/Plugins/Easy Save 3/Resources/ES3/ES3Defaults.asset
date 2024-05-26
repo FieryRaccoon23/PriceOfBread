@@ -35,7 +35,6 @@ MonoBehaviour:
     - BluMarble.Controller
     - BluMarble.Events
     - BluMarble.ID
-    - BluMarble.Interface
     - BluMarble.ML
     - BluMarble.Parameters
     - BluMarble.PlayerState

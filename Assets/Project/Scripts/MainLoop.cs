@@ -57,11 +57,6 @@ namespace BluMarble.Core
                 Assert.IsTrue(false, "PlayerStateManager not found!");
                 return;
             }
-            if (BluMarble.Interface.PlayerInterfaceManager.Instance == null)
-            {
-                Assert.IsTrue(false, "PlayerInterfaceManager not found!");
-                return;
-            }
 #if ML_TRAINING
             if (BluMarble.ML.MLManager.Instance == null)
             {
@@ -74,7 +69,6 @@ namespace BluMarble.Core
             // Init all singletons
             BluMarble.Events.EventsManager.Instance.PerformInit();
             BluMarble.PlayerState.PlayerStateManager.Instance.PerformInit();
-            BluMarble.Interface.PlayerInterfaceManager.Instance.PerformInit();
             BluMarble.Rules.RulesManager.Instance.PerformInit();
 
 #if ML_TRAINING

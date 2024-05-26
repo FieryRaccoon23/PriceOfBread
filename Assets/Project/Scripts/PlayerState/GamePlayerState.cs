@@ -1,48 +1,43 @@
 using BluMarble.Events;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace BluMarble.PlayerState
 {
-    public class  StateParameter
+    [Serializable]
+    public class StateParameter
     {
-        public float Value;
-
-        public void SetValue(float value) 
-        { 
-            Value = value; 
-        }
+        public float m_Value = 0.0f;
+        public Parameters.ParametersVariable m_Variable;
     }
 
     public class GamePlayerState : MonoBehaviour
     {
-        public List<StateParameter> m_StateParameters;
-
-        private BluMarble.ID.PlayerID m_PlayerID;
+        [SerializeField]
+        private List<StateParameter> m_StateParameters;
 
         public void PerformInit()
         {
-            m_PlayerID = GetComponent<BluMarble.ID.PlayerID>();
-
             m_StateParameters = new List<StateParameter>();
-            List<UnityEventFloat> ParameterEventsList = BluMarble.Events.EventsManager.Instance.m_InterfaceEvents[m_PlayerID.ID].m_EventsList;
 
             for (int i = 0; i < (int)BluMarble.Parameters.ParametersVariable.MaxVal; ++i)
             {
                 StateParameter NewStateParameter = new StateParameter();
-                ParameterEventsList[i].AddListener(NewStateParameter.SetValue);
+                NewStateParameter.m_Value = 0.0f;
+                NewStateParameter.m_Variable = (Parameters.ParametersVariable)i;
                 m_StateParameters.Add(NewStateParameter);
             }
         }
 
         public void SetValue(float Value, BluMarble.Parameters.ParametersVariable ParametersVariableValue)
         {
-            m_StateParameters[(int)ParametersVariableValue].Value = Value;
+            m_StateParameters[(int)ParametersVariableValue].m_Value = Value;
         }
 
         public float GetValue(BluMarble.Parameters.ParametersVariable ParametersVariableValue)
         {
-            return m_StateParameters[(int)ParametersVariableValue].Value;
+            return m_StateParameters[(int)ParametersVariableValue].m_Value;
         }
 
         public void AddValue(float Value, BluMarble.Parameters.ParametersVariable ParametersVariableValue)

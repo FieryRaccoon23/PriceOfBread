@@ -22,10 +22,10 @@ namespace BluMarble.Controller
             int thirdVal;
             int.TryParse(Third.text, out thirdVal);
 
-            BluMarble.Interface.GamePlayerStateInterface UserInterface = GetComponent<BluMarble.Interface.GamePlayerStateInterface>();
-            UserInterface.SetParameterVariable((float)firstVal, BluMarble.Parameters.ParametersVariable.BreadPrice);
-            UserInterface.SetParameterVariable((float)secondVal, BluMarble.Parameters.ParametersVariable.CostOfNormalFlour);
-            UserInterface.SetParameterVariable((float)thirdVal, BluMarble.Parameters.ParametersVariable.CostOfLookTheOtherWay);
+            //BluMarble.Interface.GamePlayerStateInterface UserInterface = GetComponent<BluMarble.Interface.GamePlayerStateInterface>();
+            //UserInterface.SetParameterVariable((float)firstVal, BluMarble.Parameters.ParametersVariable.BreadPrice);
+            //UserInterface.SetParameterVariable((float)secondVal, BluMarble.Parameters.ParametersVariable.CostOfNormalFlour);
+            //UserInterface.SetParameterVariable((float)thirdVal, BluMarble.Parameters.ParametersVariable.CostOfLookTheOtherWay);
         }
     }
 }
